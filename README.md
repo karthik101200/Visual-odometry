@@ -3,10 +3,10 @@
 
 ##### Introduction:
 
-Monocular visual odometry is aimed to get the motion estimation of a calibrated camera which is mounted on a vehicle. Hence it is possible to get the trajectory of the vehicle from the images taken from the camera.
-This camera(s) system coupled with other sensors like lidar and imu can give an optimal trajectory which is extremely useful in localisation and motion planning.Here we take images taken from a single camera and process them to obtain a trajectory and we compare it with a ground truth
+Monocular visual odometry is aimed to get the estimated motion of a calibrated camera which is mounted on a vehicle. Hence it is possible to obtain the trajectory of the vehicle from the images taken from the camera.
+This camera(s) system coupled with other sensors like lidar and imu can give an optimal trajectory which is extremely useful in localisation and motion planning.Here we take images shot from a single camera, process them to obtain a trajectory and we compare it with a ground truth.
 
-The project was coded in python(3) with OpenCV and other libraries.
+The algorithm was coded in python(3) with OpenCV and other libraries.
 
 The algorithm was implemented on dataset of 150 images provided by KITTI. The results were also confirmed by applying it on other datasets.   
 
@@ -28,7 +28,7 @@ The algorithm was implemented on dataset of 150 images provided by KITTI. The re
 
 8)Above steps are repeated for the whole dataset of images and we plot the translation(trajectory)wrt to 1st frame.
 
-NOTE-Relative translation(translation wrt 1st frame) was calculated as we require global pose / ground truth for absolute translation.
+#### NOTE-Relative translation(translation wrt 1st frame) was calculated as we require global pose / ground truth for absolute translation.
 
 #### Method(Feature Matching):
 1)Features in the 1st and 2nd frame were identified and matched using SIFT and Brute force matching(BF) along with KNN.
