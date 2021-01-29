@@ -8,6 +8,8 @@ This camera(s) system coupled with other sensors like lidar and imu can give an 
 
 The project was coded in python(3) with OpenCV and other libraries.
 
+The algorithm was implemented on dataset of 150 images provided by KITTI. The results were also confirmed by applying it on other datasets.   
+
 #### Method (Feature Tracking):
 
 1)Features(key points) in the first frame(reference) were identified by FAST.
