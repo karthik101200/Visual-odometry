@@ -29,12 +29,12 @@ The project was coded in python(3) with OpenCV and other libraries.
 NOTE-Relative translation(translation wrt 1st frame) was calculated as we require global pose / ground truth for absolute translation.
 
 #### Method(Feature Matching):
-1) Features in the 1st and 2nd frame were identified and matched using SIFT and Brute force matching(BF) along with KNN.
+1)Features in the 1st and 2nd frame were identified and matched using SIFT and Brute force matching(BF) along with KNN.
 
 2)Essential matrix was obtained by given features and camera parameters and then decomposed to obtain relative translation and rotation.
 
-3) With the relative rotation and translation point cloud(3D) of the features were obtained wrt to 1st frame by triangulation the 2D key points.
-.
+3)With the relative rotation and translation point cloud(3D) of the features were obtained wrt to 1st frame by triangulation the 2D key points.
+
 4)Now the 2nd frame was taken as the reference and all previous steps (1-3) were repeated to get features in the next frame and a cloud of features of the 2nd and 3rd frame was obtained.
 
 5)Relative scale between frames was obtained by taking the norm (mean distance ) between two clouds.
